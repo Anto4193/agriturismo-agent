@@ -56,7 +56,7 @@ Rispondi SOLO con JSON valido, nessun testo extra. Formato:
 def analizza_mail(testo_mail: str) -> dict:
     """Manda il testo della mail a Claude e ottieni JSON strutturato."""
     risposta = claude.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-haiku-4-5-20251001",
         max_tokens=1000,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": f"Analizza questa email:\n\n{testo_mail}"}]
